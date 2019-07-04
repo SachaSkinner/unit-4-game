@@ -1,2 +1,2 @@
 # unit-4-game
-crystal game
+crystal game (jquery)
