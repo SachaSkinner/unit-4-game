@@ -10,9 +10,47 @@ $(document).ready(function () {
     function randomIntFromInterval(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
-   
+
+    var total = 0;
+    //    variables for crystals
+    var yellow = randomIntFromInterval(1, 12);
+    var red = randomIntFromInterval(1, 12);
+    var green = randomIntFromInterval(1, 12);
+    var blue = randomIntFromInterval(1, 12);
+
+
+
+
     // document.getElementById("random_number").innerHTML = randomIntFromInterval(19, 120);
     $("#random_number").text(randomIntFromInterval(19, 120));
-    $("#user_number").text(randomIntFromInterval(1, 12));
-    
+   
+   
+
+    $("#yellow_crystal").on("click", function () {
+       
+        total += yellow;
+        $("#total").text(total); 
+    })
+    $("#red_crystal").on("click", function () {
+        total += red;
+        $("#total").text(total); 
+
+    })
+    $("#green_crystal").on("click", function () {
+        total += green;
+        $("#total").text(total); 
+
+    })
+    $("#blue_crystal").on("click", function () {
+        total += blue;
+        $("#total").text(total); 
+
+    })
+
+
+
+
+
+
+
 });
