@@ -1,56 +1,80 @@
-{/* <p id="random_namber"></p>
-        <p id="user_number"></p>
-        <p id="wins"></p>
-        <p id="loses"></p> */}
 
-var user_number = 0;
-var wins = 0;
-var loses = 0;
 $(document).ready(function () {
-    function randomIntFromInterval(min, max) {
-        return Math.floor(Math.random() * (max - min + 1) + min);
-    }
-
+    var wins = 0;
+    var losses = 0;
+    // user points
     var total = 0;
-    //    variables for crystals
+    // random number    
+    var randomNumber = randomIntFromInterval(19, 120)
+    $("#random_number").text("Random number now is: " + randomNumber);
+    $("#total").text("Your total is: " + total);
+    $("#losses").text("Losses: " + losses);
+    $("#wins").text("Wins: " + wins);
+    // variables for crystals
     var yellow = randomIntFromInterval(1, 12);
     var red = randomIntFromInterval(1, 12);
     var green = randomIntFromInterval(1, 12);
     var blue = randomIntFromInterval(1, 12);
 
+    // random number function with an interval
+    function randomIntFromInterval(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
 
+    // update total and check for win
+    function update(crystalValue){
+        total += crystalValue;
+        $("#total").text("Your total is: " + total);
 
+        if (total > randomNumber) {
+            losses++;
+            console.log(losses);
+            $("#losses").text("Losses: " + losses);
+            randomNumber = randomIntFromInterval(19, 120);
+            total = 0;
+            $("#random_number").text("Random number is: " + randomNumber);
+            $("#total").text("Your total is: 0");   
+    
+        }
+        if (total === randomNumber) {
+            wins++;
+            console.log(wins);
+            $("#wins").text("Wins: " + wins);
+            randomNumber = randomIntFromInterval(19, 120);
+            total = 0;
+            $("#random_number").text("Random number is: " + randomNumber);
+            $("#total").text("Your total is: 0");    
+        }
+    }    
 
-    // document.getElementById("random_number").innerHTML = randomIntFromInterval(19, 120);
-    $("#random_number").text(randomIntFromInterval(19, 120));
-   
-   
+    // document.getElementById("randomNumber").innerHTML = randomIntFromInterval(19, 120);
+    // click events for each picture
 
     $("#yellow_crystal").on("click", function () {
-       
-        total += yellow;
-        $("#total").text(total); 
-    })
+        update(yellow);
+    
+    });
     $("#red_crystal").on("click", function () {
-        total += red;
-        $("#total").text(total); 
+        update(red);
 
-    })
+    });
     $("#green_crystal").on("click", function () {
-        total += green;
-        $("#total").text(total); 
+        update(green);
 
-    })
+    });
     $("#blue_crystal").on("click", function () {
-        total += blue;
-        $("#total").text(total); 
+        update(blue);
 
-    })
-
-
-
-
-
-
+    });
+    $("#my-button").click(function(){
+        wins = 0;
+        losses = 0;
+        total = 0
+        randomNumber = randomIntFromInterval(19, 120);
+        $("#random_number").text("Random number is: " + randomNumber);
+        $("#total").text("Your total is: " + total); 
+        $("#losses").text("Losses: " + losses);
+        $("#wins").text("Wins: " + wins);        
+      });
 
 });
