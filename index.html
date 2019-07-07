@@ -14,42 +14,47 @@
     <header>Magic Crystal Game!</header>
     <div class="rules">
         Here are rules!
+
+            <p>
+                The player will be shown a random number at the start of the game.
+                When the player clicks on a crystal, it will add a specific amount of points to the player's total
+                score.</p>
+
+
+            <p> Your game will hide this amount until the player clicks a crystal.
+                When they do click one, update the player's score counter.
+                The player wins if their total score matches the random number from the beginning of the game.
+                The player loses if their score goes above the random number.</p>
+
+
         
-
-
-        <p>
-            The player will be shown a random number at the start of the game.
-    
-            When the player clicks on a crystal, it will add a specific amount of points to the player's total score.</p>
-
-
-       <p> Your game will hide this amount until the player clicks a crystal.
-        When they do click one, update the player's score counter.
-
-
-        The player wins if their total score matches the random number from the beginning of the game.
-        The player loses if their score goes above the random number.</p>
-
-
-
-
-        <p id="random_number"></p>
-        <p id="total"></p>
-        <p id="wins"></p>
-        <p id="losses"></p>
+            <p id="random_number"></p>
+            <p id="total"></p>
+            <p id="wins"></p>
+            <p id="losses"></p>
+        
         <button id="my-button">Restart the game</button>
+        <div class="crystals">
+            <img id="yellow_crystal" class="crystal" src="assets/images/Yellow_Sulphur_crystals_Bolivia_800x.jpg" alt="yellow_crystal">
 
 
-      
+            <img id="red_crystal" class="crystal black marg-right" src="assets/images/HF6273b-swarovski-light-siam-hotfix-flat-back-rhinestone.jpg"
+                alt="red_crystal">
+
+
+
+
+            <img id="blue_crystal" class="crystal black" src="assets/images/main-qimg-a8fbdd0bf12b9c51e27ce061766a6770.jpg"
+                alt="blue_crystal">
+
+
+            <img id="green_crystal" class="crystal" src="assets/images/EB0817FGSA4-650x650.jpg" alt="green_crystal">
+        </div>
+
+
+
     </div>
-    <div class="crystals">
-        <img id="yellow_crystal" class="crystal" src="assets/images/Yellow_Sulphur_crystals_Bolivia_800x.jpg" alt="yellow_crystal"> 
 
-        <img id="red_crystal" class="crystal" src="assets/images/HF6273b-swarovski-light-siam-hotfix-flat-back-rhinestone.jpg" alt="red_crystal">
-
-        <img id="blue_crystal" class="crystal" src="assets/images/main-qimg-a8fbdd0bf12b9c51e27ce061766a6770.jpg" alt="blue_crystal">
-        <img id="green_crystal" class="crystal" src="assets/images/EB0817FGSA4-650x650.jpg" alt="green_crystal">
-    </div>
     <script src="assets/javascript/game.js"></script>
 </body>
 

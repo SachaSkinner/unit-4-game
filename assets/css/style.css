@@ -16,18 +16,23 @@ header {
 }
 .rules {
 	color: black;
-	background-color: aliceblue;
+	background-color:white;
 	max-width: 700px;
 	margin: 0 auto;
 	font-size: 18px;
 	margin-top: 30px;
+	border: 2px solid black;
+	text-align: center;
+	padding: 15px;
 	
 
 }
 .crystals {
 	max-width:700px;
 	margin:0 auto;
-	margin-top: 90px;
+	background-color: white;
+	display: inline-block;
+	
 	
 }
 img {
@@ -40,7 +45,18 @@ button {
 	background-color: black;
 	color: aliceblue;
 	padding: 20px;
-	margin: 20px auto;
+	margin: 10px auto;
 	text-align: center;
+	display: block;
 	
+}
+.black {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	border: 2px solid black;
+	padding: 4px;
+}
+.marg-right {
+	margin-right: 10px;
 }
