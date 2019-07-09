@@ -33,10 +33,10 @@ $(document).ready(function () {
             randomNumber = randomIntFromInterval(19, 120);
             total = 0;
             $("#random_number").text("Random number is: " + randomNumber);
-            $("#total").text("Your total is: 0");  
-            // $("#my-button:visible").length;
-            // $('#my-button[style*="display: block"]')
-            // document.getElementById("#my-button").style.display = "block";
+            $("#total").text("Your total is: 0"); 
+            // to show the button (js and jquery)
+            // document.getElementById("my-button").style.display = "block";
+            $("#my-button").css("display", "block");
     
         }
         if (total === randomNumber) {
@@ -46,7 +46,9 @@ $(document).ready(function () {
             randomNumber = randomIntFromInterval(19, 120);
             total = 0;
             $("#random_number").text("Random number is: " + randomNumber);
-            $("#total").text("Your total is: 0");    
+            $("#total").text("Your total is: 0"); 
+            // to show the button
+            $("#my-button").css("display", "block");   
         }
     }    
 
@@ -77,7 +79,9 @@ $(document).ready(function () {
         $("#random_number").text("Random number is: " + randomNumber);
         $("#total").text("Your total is: " + total); 
         $("#losses").text("Losses: " + losses);
-        $("#wins").text("Wins: " + wins);        
+        $("#wins").text("Wins: " + wins);  
+        // to hide the button  
+        $("#my-button").css("display", "none");      
       });
 
 });
