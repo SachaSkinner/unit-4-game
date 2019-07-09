@@ -33,7 +33,10 @@ $(document).ready(function () {
             randomNumber = randomIntFromInterval(19, 120);
             total = 0;
             $("#random_number").text("Random number is: " + randomNumber);
-            $("#total").text("Your total is: 0");   
+            $("#total").text("Your total is: 0");  
+            // $("#my-button:visible").length;
+            // $('#my-button[style*="display: block"]')
+            // document.getElementById("#my-button").style.display = "block";
     
         }
         if (total === randomNumber) {
